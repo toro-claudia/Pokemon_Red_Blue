@@ -13,15 +13,17 @@ class Pokemon:
         else:
             self.moves = []
     
+    # Temporary... how to view Pokemon stats
     def info(self):
         return f"{self.name} ({self.poke_type} type) - Level {self.level}, HP: {self.health}"
 
-    # H
+    # How Pokemon take damage 
     def take_damage(self, amount): 
         self.health -= amount
         if self.health < 0:
             self.health = 0
     
+    # How Pokemon attack other Pokemon
     def attack(self, other, move):
         print(f"{self.name} uses {move.name} on {other.name}!")
         other.take_damage(move.damage)
