@@ -1,10 +1,8 @@
 import json
 
 class Introduction:
-    def __init__(self):
-        print("Hello! Welcome to our version of Pokemon Red and Black, a text-style inspired version from the original nostalgic game we know and love.")
-
     def create_profile(self):
+        print("Hello! Welcome to our version of Pokemon Red and Blue, a text-style inspired version from the original nostalgic game we know and love.")
         name = ""
         while(name == ""):
             name = input("\nTo start, please enter your name: ")
@@ -19,8 +17,13 @@ class Introduction:
         }
         with open("player_data.json", "w", encoding= "utf-8") as write_file:
             json.dump(player_data, write_file)
-
-game = Introduction()
-game.create_profile()
+            
+    ''' 
+    def login(self):
+        while(user != player_data(user))
+        user = input("\nEnter your username: ")
+        password = input("\Enter your password: ")
+    '''
+intro = Introduction()
 
     
